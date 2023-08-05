@@ -1,0 +1,44 @@
+--- 
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Putu Citananta Indrawan Sloka's Web Page">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/foto.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--white: 236,233,240;
+		--accent: 88, 181, 214;
+		--accent-light: 201, 204, 192;
+		--accent-dark: 19, 16, 74;
+		--accent-green: 35, 158, 33;
+		--accent-purple : 111, 42, 161;
+		--accent-blue: 50, 78, 168;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent-blue)), rgb(var(--white)) 10%);
+		--accent-gradient-sosmed: linear-gradient(10deg, rgb(var(--accent-light)), rgb(var(--accent-purple)) 50%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151A;
+		background-size: 224px;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

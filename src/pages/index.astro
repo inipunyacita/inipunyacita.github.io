@@ -1,15 +1,188 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import SubCard from '../components/SubCard.astro';
+import DoneCard from '../components/PortfolioCard.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Citananta Indrawan">
+	<main>
+		<!-- navmenu -->
+		<div class="instructions text-sm font-bold flex justify-center">
+			<ul class="grid grid-cols-4 w-3/4 text-center">
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#what">What i Do</a></li>
+				<li><a href="#done">What's Done</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- header -->
+		<header class="my-5" id="#"><h1 class="mb-9 text-base">Welcome to <span class="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-600 to-blue-200"
+			>Citananta</span>'s Page</h1>		
+		<div class="instructions grid grid-cols-3 items-center">
+			<div class="col-span-1 py-2 flex justify-center items-center"><img class="w-24 h-28" src="foto.png" alt="" srcset=""></div>
+			<div class="col-span-2 py-2 "> <span class="text-sm">Hi,</span> <code>Cita</code> <span class="text-sm">here.</span><br /> interest to explore
+				<strong>Web Programming</strong> <br><span class="text-sm">love to do travel activity and being a Videographer </span></div>
+		</div>
+		</header>
+		<!-- about me -->
+		<div class="about my-5" id="about">
+			<br>
+			<h2 class="text-center mt-18 mb-1"><span class="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-600 to-blue-200"
+				>About</span> Me</h2>
+			<div class="subcard flex justify-center w-100 mb-5">
+				<SubCard/>
+			</div>
+			<h3 class="font-bold">Education</h3>
+				<div class="text-sm italic font-bold text-gradient">Bali State Polytechnic (2019 - 2022)</div><br>
+				<p class="text-sm">Associate Degree Graduated Student from Management Information major. Currently i work as a self employee and also did some freelance project (if any).</p><br>
+				<hr class="w-1/2"><br>
+			<h3 class="font-bold">Experienced</h3>
+				<div class="text-sm italic font-bold text-gradient">PT. Timedoor Indonesia (2022 - now)</div><br>
+				<p class="text-sm">This company was my first professional company that i've worked with until now. I work as a <code>Website Quality Assurance / Tester</code> here.</p><br>
+			<br>
+		</div>
+		<!-- what i do -->
+		<div class="what-i-do my-5" id="what">
+			<br>
+			<h2 class="text-center mt-18 mb-5">What <span class="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-600 to-blue-200"
+				>i Do</span> ?</h2>
+			<ul role="list" class="link-card-grid">
+				<!-- di bawah berisi logo contoh web development, tambah logo tech stack, videography tambah foto tech stack -->
+				<Card
+					href="#"
+					title="Project Testing"
+					body="See all project that i've been tested before"
+				/>
+				<Card
+					href="#"
+					title="Web Development"
+					body="Look to some web development project that i've been done"
+				/>
+				<Card
+					href="#"
+					title="Videography"
+					body="Feel free to explore my travel video.."
+				/>
+				<Card
+					href="#"
+					title="Other"
+					body="Uncategorized project from me, may you want to see.."
+				/>
+			</ul>
+		</div>
+		<div class="btn flex justify-center"><a href="#" class="rounded-md bg-slate-500 w-28 text-center p-3 text-sm">See More</a></div>
+		<!-- what's done -->
+		<div class="whats-done my-5" id="done"><br>
+			<h2 class="text-center mt-18 mb-5">What's <span class="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-600 to-blue-200"
+				>Done</span> ?</h2>
+			<ul>
+				<DoneCard
+					title='Website Pemilu Raya 2021'
+					content='Website ini adalah website pemilu raya PNB'
+					project_type='Website Development'
+					href='#'
+				/>
+				<DoneCard
+					title='Website NAC (Nation Accounting Competition) 2021'
+					content='Website ini adalah website program kerja NAC jurusan Akuntansi PNB'
+					project_type='Website Development'
+					href='#'
+				/>
+				<DoneCard
+					title='Video Preparation Nyepi - Br Mertha Rauh'
+					content='Video cuplikan persiapan Nyepi oleh ST.Eka Pramana Br. Mertha Rauh'
+					project_type='Videography'
+					href='#'
+				/>
+				<DoneCard
+					title='Website E-Test English PNB x LSK BIG'
+					content='Website ini adalah website sertifikasi online uji kemampuan bahasa inggris oleh PNB bersama LSK BIG'
+					project_type='Website Development'
+					href='#'
+				/>
+			</ul>
+		</div>
+		<div class="btn flex justify-center"><a href="#" class="rounded-md w-28 text-center p-3 text-sm">See More</a></div>
+		<!-- contact -->
+		<div class="contact my-5" id="contact"><br>
+			<h2 class="text-center my-5"><span class="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-600 to-blue-200"
+				>Contact</span> Me</h2>
+			<div class="instructions text-sm flex items-center justify-between">
+				<div>
+					Any <code>Inquire</code> Needed ? <br>
+					Feel free to reach me out. <br>
+				</div>
+				<div>
+					<a href="https://wa.me/+6287860002191" class="bg-slate-500 rounded-md w-28 p-3 text-sm" target="_blank">Click Here</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.btn a {
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+	}
+	.btnfooter a {
+		background: linear-gradient(rgba(var(--accent-light), 66%), rgba(var(--accent-light), 33%));
+	}
+	code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
